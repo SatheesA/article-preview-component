@@ -1,0 +1,163 @@
+/** @format */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/** @format */
+.container--small {
+  padding: 30px;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background: hsl(218deg, 22%, 67%);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto -webkit-min-content;
+  grid-template-rows: auto min-content;
+}
+
+.card {
+  max-width: 350px;
+  display: grid;
+}
+@media screen and (min-width: 700px) {
+  .card {
+    grid-template-columns: 0.7fr 1fr;
+    max-width: 700px;
+  }
+}
+.card__cover-image {
+  border-radius: 10px 10px 0 0;
+  -o-object-position: top right;
+     object-position: top right;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 4/2.7;
+}
+@media screen and (min-width: 700px) {
+  .card__cover-image {
+    aspect-ratio: initial;
+    -o-object-position: left top;
+       object-position: left top;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+}
+.card__content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+}
+@media screen and (min-width: 700px) {
+  .card__content {
+    border-radius: 0 10px 10px 0;
+  }
+}
+.card__title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.card__sub-title {
+  line-height: 1.5rem;
+  color: hsl(214deg, 17%, 51%);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.card__footer {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px;
+}
+.card__share-btn {
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.card__share-btn svg {
+  min-width: 15px;
+}
+.card__contact {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 1rem;
+}
+.card__contact-photo {
+  max-width: 50px;
+  border-radius: 50%;
+}
+.card__contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.card__contact-name {
+  font-weight: 700;
+}
+.card__contact-date {
+  color: darkgray;
+  font-weight: 700;
+}
+.card__social-share {
+  display: none;
+}
+.card__social-share p {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: darkgray;
+}
+.card--show-share {
+  background: hsl(217deg, 19%, 35%);
+}
+.card--show-share .card__footer-share-btn {
+  background: hsl(212deg, 23%, 69%);
+}
+.card--show-share .card__contact-photo {
+  display: none;
+}
+.card--show-share .card__contact-info {
+  display: none;
+}
+.card--show-share .card__social-share {
+  display: flex;
+  gap: 1rem;
+}/*# sourceMappingURL=style.css.map */

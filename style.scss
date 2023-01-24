@@ -1,0 +1,165 @@
+/** @format */
+
+@use "./styles/reset";
+
+@mixin for-tablet-up {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin for-upper-breakpoint {
+  @media screen and (min-width: 700px) {
+    @content;
+  }
+}
+
+.container--small {
+  padding:30px;
+}
+
+
+$footer: null;
+$contact: null;
+$social: null;
+
+body {
+  font-family: "Karla", sans-serif;
+  background: hsl(218, 22%, 67%);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto min-content;
+}
+
+.card {
+  max-width: 350px;
+  display: grid;
+
+  @include for-upper-breakpoint {
+    grid-template-columns: 0.7fr 1fr;
+    max-width: 700px;
+  }
+
+  &__cover-image {
+    border-radius: 10px 10px 0 0;
+    object-position: top right;
+    object-fit: cover;
+    aspect-ratio: 4 / 2.7;
+    @include for-upper-breakpoint {
+      aspect-ratio: initial;
+      object-position: left top;
+      height: 100%;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+
+    @include for-upper-breakpoint {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+
+  &__sub-title {
+    line-height: 1.5rem;
+    color: hsl(214, 17%, 51%);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__footer {
+    $footer: & !global;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    min-height: 5rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px;
+  }
+
+  &__share-btn {
+    color: black;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: 10px;
+
+    svg {
+      min-width: 15px;
+    }
+  }
+
+  &__contact {
+    $contact: & !global;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 1rem;
+    &-photo {
+      max-width: 50px;
+      border-radius: 50%;
+    }
+
+    &-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    &-name {
+      font-weight: 700;
+    }
+
+    &-date {
+      color: darkgray;
+      font-weight: 700;
+    }
+  }
+
+  &__social-share {
+    $social: & !global;
+    display: none;
+    p {
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      color: darkgray;
+    }
+  }
+
+  &--show-share {
+    background: hsl(217, 19%, 35%);
+    #{$footer}-share-btn {
+      background: hsl(212, 23%, 69%);
+    }
+
+    #{$contact}-photo {
+      display: none;
+    }
+
+    #{$contact}-info {
+      display: none;
+    }
+
+    #{$social} {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
