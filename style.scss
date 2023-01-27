@@ -3,23 +3,27 @@
 @use "./styles/reset";
 @use "sass:selector";
 
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
 @mixin for-tablet-up {
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: toRem(375)) {
     @content;
   }
 }
 
 @mixin for-upper-breakpoint {
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: toRem(700)) {
     @content;
   }
 }
 
 .container--small {
-  padding: 30px;
+  padding: toRem(30);
 }
 
-$footer: null;
 $contact: null;
 $social: null;
 $card: null;
@@ -35,12 +39,12 @@ body {
 
 .card {
   $card: & !global;
-  max-width: 350px;
+  max-width: toRem(350);
   display: grid;
 
   @include for-upper-breakpoint {
     grid-template-columns: 0.7fr 1fr;
-    max-width: 700px;
+    max-width: toRem(700);
   }
 
   &__cover-image {
@@ -84,7 +88,6 @@ body {
   }
 
   &__footer {
-    $footer: & !global;
     background-color: #fff;
     border-radius: 0 0 10px 10px;
     display: flex;
@@ -175,7 +178,7 @@ body {
       }
     }
 
-    .card_social-container {
+    #{$card}_social-container {
       display: flex;
       align-items: center;
       gap: 1rem;

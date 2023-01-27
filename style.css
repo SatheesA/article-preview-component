@@ -29,7 +29,7 @@ video {
 
 /** @format */
 .container--small {
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 body {
@@ -43,13 +43,13 @@ body {
 }
 
 .card {
-  max-width: 350px;
+  max-width: 21.875rem;
   display: grid;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .card {
     grid-template-columns: 0.7fr 1fr;
-    max-width: 700px;
+    max-width: 43.75rem;
   }
 }
 .card__cover-image {
@@ -60,7 +60,7 @@ body {
      object-fit: cover;
   aspect-ratio: 4/2.7;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .card__cover-image {
     aspect-ratio: initial;
     -o-object-position: left top;
@@ -76,7 +76,7 @@ body {
   background: #fff;
   border-radius: 0 0 10px 10px;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .card__content {
     border-radius: 0 10px 10px 0;
   }
@@ -90,7 +90,7 @@ body {
 }
 .card__sub-title {
   line-height: 1.5rem;
-  color: hsl(214deg, 17%, 51%);
+  color: #67788f;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -135,7 +135,7 @@ body {
   font-weight: 700;
 }
 .card__contact-date {
-  color: darkgray;
+  color: #737373;
   font-weight: 700;
 }
 .card__social-share {
@@ -156,7 +156,7 @@ body {
 .card--show-share .card__contact-photo {
   display: none;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .card--show-share .card__contact-photo {
     display: block;
   }
@@ -164,7 +164,7 @@ body {
 .card--show-share .card__contact-info {
   display: none;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .card--show-share .card__contact-info {
     display: flex;
     flex-direction: column;
@@ -198,7 +198,7 @@ body {
   background: hsl(217deg, 19%, 35%);
   border-radius: 0 0 9px 9px;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .card--show-share .card__social-share {
     inset: initial;
     top: -50px;
