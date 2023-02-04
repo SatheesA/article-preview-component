@@ -47,6 +47,10 @@ body {
     max-width: toRem(700);
   }
 
+  &__cover {
+    display: flex;
+  }
+
   &__cover-image {
     border-radius: 10px 10px 0 0;
     object-position: top right;
@@ -55,7 +59,6 @@ body {
     @include for-upper-breakpoint {
       aspect-ratio: initial;
       object-position: left top;
-      height: 100%;
       border-radius: 10px 0 0 10px;
     }
   }

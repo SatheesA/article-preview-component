@@ -52,6 +52,9 @@ body {
     max-width: 43.75rem;
   }
 }
+.card__cover {
+  display: flex;
+}
 .card__cover-image {
   border-radius: 10px 10px 0 0;
   -o-object-position: top right;
@@ -65,7 +68,6 @@ body {
     aspect-ratio: initial;
     -o-object-position: left top;
        object-position: left top;
-    height: 100%;
     border-radius: 10px 0 0 10px;
   }
 }
