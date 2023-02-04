@@ -183,7 +183,7 @@ body {
       align-items: center;
       gap: 1rem;
       position: relative;
-      ::after {
+      &::after {
         position: absolute;
         width: 0;
         height: 0;

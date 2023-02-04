@@ -90,7 +90,7 @@ body {
 }
 .card__sub-title {
   line-height: 1.5rem;
-  color: #67788f;
+  color: hsl(214deg, 17%, 51%);
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -135,7 +135,7 @@ body {
   font-weight: 700;
 }
 .card__contact-date {
-  color: #737373;
+  color: darkgray;
   font-weight: 700;
 }
 .card__social-share {
@@ -176,7 +176,7 @@ body {
   gap: 1rem;
   position: relative;
 }
-.card--show-share .card_social-container ::after {
+.card--show-share .card_social-container::after {
   position: absolute;
   width: 0;
   height: 0;
